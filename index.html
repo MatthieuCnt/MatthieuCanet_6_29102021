@@ -1,22 +1,133 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link href="css/style.css" rel="stylesheet" type="text/css" />
-    <meta charset="utf-8">
-    <link rel="icon" type="image/png" href="assets/favicon.png">
-    <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
-    <title>Fisheye</title>
-  </head>
-  <body>
-    <header>
-        <img src="assets/images/logo.png" class="logo" />
-        <h1>Nos photographes</h1>
-    </header>
-    <main id="main">
-        <div class="photographer_section"></div>
-    </main>
-    <script src="scripts/factories/Photographer.js"></script>
-    <script src="scripts/pages/index.js"></script>
-    <script src="scripts/pages/photographer.js"></script>
-  </body>
+	<head>
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="normalizer.css" />
+		<link rel="stylesheet" href="modal.css" />
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="style.css"
+			media="screen AND (max-width: 590px)"
+		/>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<link rel="icon" type="image/png" href="assets/favicon.png" />
+		<link
+			href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap"
+			rel="stylesheet"
+		/>
+		<title>Fisheye</title>
+	</head>
+	<body>
+		<header class="header">
+			<a href="index.html">
+				<img src="assets/img/logo.png" class="logo" />
+			</a>
+		</header>
+		<h1 class="header-title">Nos Photographes</h1>
+
+		<!-- NAV -->
+		<nav
+			class="filters"
+			aria-label="photographer categories"
+			role="navigation"
+		>
+			<ul class="nav_ul">
+				<a href="#"
+					><li class="nav_li" data-filter="portrait">#Portrait</li></a
+				>
+				<a href="#"><li class="nav_li" data-filter="art">#Art</li></a>
+				<a href="#"
+					><li class="nav_li" data-filter="fashion">#Fashion</li></a
+				>
+				<a href="#"
+					><li class="nav_li" data-filter="architecture">
+						#Architecture
+					</li></a
+				>
+				<a href="#"
+					><li class="nav_li" data-filter="travel">#Travel</li></a
+				>
+				<a href="#"
+					><li class="nav_li" data-filter="sport">#Sport</li></a
+				>
+				<a href="#"
+					><li class="nav_li" data-filter="animals">#Animals</li></a
+				>
+				<a href="#"
+					><li class="nav_li" data-filter="events">#Events</li></a
+				>
+			</ul>
+		</nav>
+		<main>
+			<article class="article">
+				<img
+					class="article_picture"
+					src="assets/img/Portrait_Nora.jpg"
+				/>
+				<h2 class="article_name">Mimi Keel</h2>
+				<p class="article_localization">London, UK</p>
+				<p class="article_text">Voir le beau dans le quotidien</p>
+				<p class="article_price">400€/jour</p>
+			</article>
+			<article class="article">
+				<img
+					class="article_picture"
+					src="assets/img/Architecture_Horseshoe.jpg"
+				/>
+				<h2 class="article_name">Ellie-Rose Wilkens</h2>
+				<p class="article_localization">Paris, France</p>
+				<p class="article_text">
+					Travaille sur des compositions complexes
+				</p>
+				<p class="article_price">250€/jour</p>
+			</article>
+			<article class="article">
+				<img
+					class="article_picture"
+					src="assets/img/Fashion_Urban_Jungle.jpg"
+				/>
+				<h2 class="article_name">Tracy Galindo</h2>
+				<p class="article_localization">Montreal, Canada</p>
+				<p class="article_text">Photographe freelance</p>
+				<p class="article_price">500€/jour</p>
+			</article>
+
+			<article class="article">
+				<img
+					class="article_picture"
+					src="assets/img/Travel_Outdoor_Baths.jpg"
+				/>
+				<h2 class="article_name">Nabeel Bradford</h2>
+				<p class="article_localization">Mexico City, Mexico</p>
+				<p class="article_text">Je vais toujours de l'avant</p>
+				<p class="article_price">350€/jour</p>
+			</article>
+			<article class="article">
+				<img
+					class="article_picture"
+					src="assets/img/Fashion_Melody_Red_on_Stripes.jpg"
+				/>
+				<h2 class="article_name">Rhode Dubois</h2>
+				<p class="article_localization">Barcelona, Spain</p>
+				<p class="article_text">Créatrice de souvenirs</p>
+				<p class="article_price">375€/jour</p>
+			</article>
+			<article class="article">
+				<img
+					class="article_picture"
+					src="assets/img/Travel_Tower.jpg"
+				/>
+				<h2 class="article_name">Marcel Nikolic</h2>
+				<p class="article_localization">Berlin, Germany</p>
+				<p class="article_text">Toujours à la recherche de LA photo</p>
+				<p class="article_price">300€/jour</p>
+			</article>
+		</main>
+		<script src="scripts/factories/Photographer.js"></script>
+		<script src="scripts/pages/index.js"></script>
+		<script src="scripts/pages/photographer.js"></script>
+	</body>
 </html>
+© 2021 GitHub, Inc. Terms Privacy
