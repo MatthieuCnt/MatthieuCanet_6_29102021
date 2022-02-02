@@ -1,44 +1,32 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link href="css/style.css" rel="stylesheet" type="text/css" />
+		<link href="css/photographer.css" rel="stylesheet" type="text/css" />
+		<link href="css/modal.css" rel="stylesheet" type="text/css" />
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/png" href="assets/favicon.png" />
 		<link
 			href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap"
 			rel="stylesheet"
 		/>
+		<script
+			src="https://kit.fontawesome.com/5f95a73160.js"
+			crossorigin="anonymous"
+		></script>
 		<title>Fisheye - photographe</title>
 	</head>
 	<body>
-		<header>
+		<header class="header_style">
 			<a href="index.html">
 				<img src="assets/images/logo.png" class="logo"
 			/></a>
 		</header>
-		<main id="main">
-			<div class="photograph-header">
-				<button class="contact_button" onclick="displayModal()">
-					Contactez-moi
-				</button>
-			</div>
-		</main>
-		<div id="contact_modal">
-			<div class="modal">
-				<header>
-					<h2>Contactez-moi</h2>
-					<img src="assets/icons/close.svg" onclick="closeModal()" />
-				</header>
-				<form>
-					<div>
-						<label>Prénom</label>
-						<input />
-					</div>
-					<button class="contact_button">Envoyer</button>
-				</form>
-			</div>
-		</div>
-		<script src="/scripts/utils/contactForm.js"></script>
-		<script src="/scripts/pages/photographer.js"></script>
+		<main id="main"></main>
+		<footer class="photographer_footer"></footer>
+		<script src="./scripts/utils/contactForm.js"></script>
+		<script src="./scripts/pages/modal.js"></script>
+		<script src="./scripts/pages/modal_img.js"></script>
+		<script src="./scripts/pages/photographer.js"></script>
+		<div id="modal_img" class="bground_modal_img"></div>
 	</body>
 </html>

@@ -1,76 +1,238 @@
 #contact_modal {
-    display: none;
+	display: none;
 }
 
-.photograph-header {
-    background-color: #FAFAFA;
-    height: 300px;
-    margin: 0 100px;
+body {
+	font-family: 'DM Sans', sans-serif;
+	margin: 0;
+	padding: 2rem;
+}
+
+main {
+	padding: 60px 100px;
+}
+
+h1 {
+	color: #d3573c;
+	font-size: 60px;
+}
+
+.logo {
+	height: 50px;
+}
+
+.header_style {
+	margin: 0 100px 0 100px;
+}
+
+.photograph_header {
+	background-color: #fafafa;
+	border-radius: 5px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	margin-top: 3rem;
+	padding: 3rem 2rem;
+}
+
+.photographer_localization {
+	color: #901c1c;
+	font-size: 22px;
+	margin-top: -2rem;
+}
+
+.photographer_tagline {
+	color: #525252;
+}
+
+.photograph_button {
+	padding: 5rem;
+}
+
+.photographer-img {
+	height: 200px;
+	width: 200px;
+	border-radius: 50%;
+	object-fit: cover;
+	place-self: center;
 }
 
 .contact_button {
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
-    padding: 11px;
-    width: 170px;
-    height: 70px;
-    border: none;
-    background-color: #901C1C;
-    border-radius: 5px;
-    cursor: pointer;
+	font-size: 20px;
+	color: white;
+	padding: 11px;
+	width: 170px;
+	height: 70px;
+	border: none;
+	background-color: #901c1c;
+	border-radius: 5px;
+	cursor: pointer;
+	margin: auto;
+}
+
+.contact_button:hover {
+	background-color: #db8876;
+	color: black;
+	font-size: bold;
+}
+
+.photographer_picture {
+	font-weight: bold;
+}
+
+.select_style {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background-color: #911c1c;
+	border-radius: 5px;
+	border: none;
+	width: 160px;
+	color: white;
+	height: 60px;
+	padding-left: 1rem;
+	margin: 2rem 2rem 0;
+}
+
+.arrow {
+	position: absolute;
+	color: white;
+	margin: 3rem 0 0 -4rem;
+	font-size: 1.5rem;
+}
+
+.select_style > option {
+	display: block;
+	color: white;
+	border-bottom: 5px solid white;
+}
+
+.select_style_option {
+	padding-left: 2rem;
+}
+
+.photographer_gallery {
+	display: grid;
+	gap: 2rem;
+	grid-template-columns: repeat(3, 1fr);
+	margin-top: 30px;
+}
+
+.photographer_gallery_picture {
+	height: 320px;
+	width: 100%;
+	margin: 0;
+}
+
+.photographer_gallery_img {
+	width: 100%;
+	cursor: pointer;
+	border-radius: 5px;
+	object-fit: cover;
+	height: 290px;
+}
+
+.photographer_gallery_footer {
+	display: flex;
+	justify-content: space-between;
+	height: 30px;
+	font-size: 1.5rem;
+	color: #901c1c;
+}
+
+.photographer_gallery_footer_text {
+	color: #901c1c;
+	font-size: 22px;
+	align-self: center;
+}
+
+.photographer_gallery_footer_heart {
+	display: flex;
+	flex-direction: row;
+	align-self: center;
+	font-size: 1.5rem;
+	color: #901c1c;
+}
+
+.heart {
+	padding-left: 1rem;
+	color: #901c1c;
+	align-self: center;
+}
+
+.footer_heart {
+	padding-left: 10px;
+	align-self: center;
 }
 
 .modal {
-    border-radius: 5px;
-    background-color: #DB8876;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 35px;
-    margin: auto;
+	border-radius: 5px;
+	background-color: #db8876;
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	padding: 35px;
+	margin: auto;
 }
 
 .modal header {
-    justify-content: space-between;
-    width: 100%;
+	justify-content: space-between;
+	width: 100%;
 }
 
 .modal header img {
-    cursor: pointer;
+	cursor: pointer;
 }
 
 .modal header h2 {
-    font-size: 64px;
-    font-weight: normal;
-    text-align: center;
+	font-size: 64px;
+	font-weight: normal;
+	text-align: center;
 }
 
 form {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    align-items: flex-start;
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	align-items: flex-start;
 }
 
 form label {
-    color: #312E2E;
-    font-size: 36px;
+	color: #312e2e;
+	font-size: 36px;
 }
 
 form div {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: self-start;
-    margin-bottom: 26px;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	align-items: self-start;
+	margin-bottom: 26px;
 }
 
 form input {
-    width: 100%;
-    height: 68px;
-    border: none;
-    border-radius: 5px;
+	width: 100%;
+	height: 68px;
+	border: none;
+	border-radius: 5px;
+}
+
+.footer_section {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	background-color: #db8876;
+	font-weight: bold;
+	bottom: 0;
+	height: 60px;
+	font-size: 22px;
+	padding: 0 2rem;
+	right: 3rem;
+	width: 260px;
+}
+.footer_div {
+	display: flex;
+	align-items: center;
 }
