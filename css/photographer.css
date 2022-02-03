@@ -5,7 +5,7 @@
 body {
 	font-family: 'DM Sans', sans-serif;
 	margin: 0;
-	padding: 2rem;
+	padding: 30px;
 }
 
 main {
@@ -30,14 +30,14 @@ h1 {
 	border-radius: 5px;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	margin-top: 3rem;
-	padding: 3rem 2rem;
+	margin-top: 40px;
+	padding: 40px 30px;
 }
 
 .photographer_localization {
 	color: #901c1c;
 	font-size: 22px;
-	margin-top: -2rem;
+	margin-top: -30px;
 }
 
 .photographer_tagline {
@@ -45,7 +45,7 @@ h1 {
 }
 
 .photograph_button {
-	padding: 5rem;
+	padding: 60px;
 }
 
 .photographer-img {
@@ -89,15 +89,15 @@ h1 {
 	width: 160px;
 	color: white;
 	height: 60px;
-	padding-left: 1rem;
-	margin: 2rem 2rem 0;
+	padding-left: 20px;
+	margin: 30px 30px 0;
 }
 
 .arrow {
 	position: absolute;
 	color: white;
-	margin: 3rem 0 0 -4rem;
-	font-size: 1.5rem;
+	margin: 48px 0 0 -60px;
+	font-size: 25px;
 }
 
 .select_style > option {
@@ -107,12 +107,12 @@ h1 {
 }
 
 .select_style_option {
-	padding-left: 2rem;
+	padding-left: 32px;
 }
 
 .photographer_gallery {
 	display: grid;
-	gap: 2rem;
+	gap: 30px;
 	grid-template-columns: repeat(3, 1fr);
 	margin-top: 30px;
 }
@@ -135,7 +135,7 @@ h1 {
 	display: flex;
 	justify-content: space-between;
 	height: 30px;
-	font-size: 1.5rem;
+	font-size: 25px;
 	color: #901c1c;
 }
 
@@ -149,12 +149,12 @@ h1 {
 	display: flex;
 	flex-direction: row;
 	align-self: center;
-	font-size: 1.5rem;
+	font-size: 25px;
 	color: #901c1c;
 }
 
 .heart {
-	padding-left: 1rem;
+	padding-left: 16px;
 	color: #901c1c;
 	align-self: center;
 }
@@ -228,8 +228,8 @@ form input {
 	bottom: 0;
 	height: 60px;
 	font-size: 22px;
-	padding: 0 2rem;
-	right: 3rem;
+	padding: 0 32px;
+	right: 48px;
 	width: 260px;
 }
 .footer_div {

@@ -17,6 +17,8 @@ const displayInfo = photographer => {
 	create_article(photographerInfo);
 };
 
+let mediasForLightbox = [];
+
 const displayMedia = media => {
 	console.log(media);
 	let MediaInfo = {
@@ -29,6 +31,13 @@ const displayMedia = media => {
 		price: media.price,
 		video: media.video,
 	};
+
+	mediasForLightbox.push({
+		id: media.id,
+		title: media.title,
+		url: media.url, // image ou video
+	});
+
 	create_article_img(MediaInfo);
 };
 

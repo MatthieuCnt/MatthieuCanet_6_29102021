@@ -3,7 +3,7 @@
 body {
 	font-family: 'DM Sans', sans-serif;
 	margin: 0;
-	padding: 2rem;
+	padding: 32px;
 }
 
 header {
@@ -50,6 +50,7 @@ h1 {
 	width: 200px;
 	border-radius: 50%;
 	object-fit: cover;
+	margin: auto;
 }
 
 .photographer_img {
@@ -76,7 +77,7 @@ h1 {
 .photographer_link:active {
 	border: 2px solid #911c1c;
 	border-radius: 5px;
-	padding: 2rem;
+	padding: 32px;
 }
 
 .photographer_localization {
@@ -92,19 +93,18 @@ h1 {
 	border-radius: 5px;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	margin-top: 3rem;
-	padding: 3rem 2rem;
+	margin-top: 48px;
+	padding: 48px 32px;
 }
 
 .photographer_name {
 	color: #d3573c;
 	font-size: 64px;
-	line-height: 4rem;
-	margin: 0rem;
+	line-height: 55px;
+	margin: 0px;
 }
 
 .photographer_tagline {
 	color: #525252;
 	font-size: 18px;
-	margin: 0 0.2rem;
 }

@@ -15,13 +15,13 @@
 	transform: translate(-50%, -50%);
 	z-index: 1;
 	border-radius: 3px;
-	width: 30rem;
+	width: 60vh;
 	background-color: #db8876;
 	padding: 30px;
 }
 
 .form_modal {
-	margin-top: 1rem;
+	margin-top: 16px;
 }
 
 .input_modal {
@@ -33,7 +33,7 @@
 	color: #fff;
 	background-color: transparent;
 	border: none;
-	font-size: 2.5rem;
+	font-size: 40px;
 	top: 30px;
 	right: 30px;
 	cursor: pointer;
@@ -70,26 +70,23 @@
 	top: 0;
 	height: 100%;
 	width: 100%;
-	overflow: auto;
 	background-color: rgba(202, 202, 202, 0.6);
 	display: none;
 }
 
 .modal_section_img {
 	position: fixed;
-	top: 50vh;
-	left: 50vw;
+	top: 50%;
+	left: 50%;
 	transform: translate(-50%, -50%);
 	z-index: 1;
-	margin: auto;
 	border-radius: 3px;
-	overflow: hidden;
-	padding: 1rem 6rem 0rem;
+	padding: 20px 100px;
 	background-color: #fff;
 }
 
 .form_modal_img {
-	margin-top: 1rem;
+	margin-top: 16px;
 }
 
 .close_img {
@@ -97,15 +94,15 @@
 	color: #fff;
 	background-color: transparent;
 	border: none;
-	font-size: 2.5rem;
-	top: 1rem;
-	right: 1.5rem;
+	font-size: 40px;
+	top: 16px;
+	right: 25px;
 	cursor: pointer;
 	font-weight: bold;
 }
 
 .modal_img {
-	width: 70rem;
+	max-height: 80vh;
 }
 
 .cross_img {
@@ -127,6 +124,7 @@
 	font-size: 40px;
 	right: 30px;
 	top: 50%;
+	transform: translateY(-50%);
 }
 
 .left_chevron {
@@ -135,4 +133,5 @@
 	font-size: 40px;
 	left: 30px;
 	top: 50%;
+	transform: translateY(-50%);
 }
