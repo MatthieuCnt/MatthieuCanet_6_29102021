@@ -76,38 +76,107 @@ h1 {
 }
 
 .photographer_picture {
+	display: flex;
 	font-weight: bold;
 }
 
-.select_style {
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
-	background-color: #911c1c;
-	border-radius: 5px;
-	border: none;
-	width: 160px;
-	color: white;
-	height: 60px;
-	padding-left: 20px;
-	margin: 30px 30px 0;
+/* *** */
+.css-select,
+.css-select *,
+.css-select *::before,
+.css-select *::after {
+	box-sizing: border-box;
 }
-
-.arrow {
-	position: absolute;
-	color: white;
-	margin: 48px 0 0 -60px;
-	font-size: 25px;
+.css-select {
+	position: relative;
+	max-width: 12rem;
+	margin-left: 12px;
+	bottom: 10px;
 }
-
-.select_style > option {
+.css-select:after {
+	content: '';
 	display: block;
-	color: white;
-	border-bottom: 5px solid white;
+	position: absolute;
+	top: calc(50% - 0.5rem);
+	right: 0.75rem;
+	width: 0.5rem;
+	height: 0.5rem;
+	border: 0 solid #fff;
+	border-width: 0 0.125rem 0.125rem 0;
+	transform: rotate(45deg);
+	transition: top 0.3s ease, transform 0.3s ease;
+	will-change: top;
+	pointer-events: none;
 }
-
-.select_style_option {
-	padding-left: 32px;
+.css-select:focus-within:after {
+	top: calc(50% - 0.25rem);
+	transform: rotate(225deg);
+}
+.css-select__selected {
+	display: block;
+	margin: 0;
+	padding: 0.75rem 3rem 0.75rem 1rem;
+	width: 100%;
+	font-size: 1.125rem;
+	color: #fff;
+	line-height: 1.2;
+	border: none;
+	border-radius: 0.25rem;
+	background: #911c1c;
+	box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.25);
+	cursor: pointer;
+	outline: none !important;
+}
+.css-select__dropdown {
+	position: absolute;
+	top: 24px;
+	left: 0;
+	padding: 0.5rem;
+	width: 100%;
+	max-height: 9.75rem;
+	background: #911c1c;
+	border-radius: 0.25rem;
+	transform: translateY(1.25rem);
+	opacity: 0;
+	visibility: hidden;
+	transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+	overflow: auto;
+	z-index: 9999;
+}
+.css-select__dropdown::-webkit-scrollbar {
+	width: 0.5rem;
+}
+.css-select__dropdown::-webkit-scrollbar-track {
+	background: transparent;
+	border-radius: 0.25rem;
+}
+.css-select__dropdown::-webkit-scrollbar-thumb {
+	background: #535353;
+	border-radius: 0.25rem;
+}
+.css-select__dropdown::-webkit-scrollbar-thumb:hover {
+	background: #717171;
+}
+.css-select:focus-within .css-select__dropdown {
+	transform: translateY(0.75rem);
+	opacity: 1;
+	visibility: visible;
+}
+.css-select__option {
+	display: block;
+	margin: 0;
+	padding: 0.5rem;
+	width: 100%;
+	font-size: 1.125rem;
+	color: #fff;
+	text-align: left;
+	line-height: 1.2;
+	border: none;
+	border-top: 1px solid white;
+	background: transparent;
+	transition: background 0.3s ease;
+	cursor: pointer;
+	outline: none !important;
 }
 
 .photographer_gallery {

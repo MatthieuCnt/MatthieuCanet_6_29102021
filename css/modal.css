@@ -105,6 +105,10 @@
 	max-height: 80vh;
 }
 
+.modal_picture {
+	max-height: 80vh;
+}
+
 .cross_img {
 	position: absolute;
 	right: 30px;

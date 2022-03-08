@@ -4,9 +4,26 @@ function launchModalImg() {
 
 	function closemodalimg() {
 		document.getElementById('modal_img').style.display = 'none';
+		document.getElementById('modal_img').innerHTML = '';
 	}
 
-	const identifierModalImg = this.id;
+	//NEXT/PREV ARROW
+	var slider_img = document.querySelector('.modal_picture');
+	var images = document.querySelectorAll('.photographer_gallery_img');
+	console.log(images);
+	var i = 0;
+
+	function prev() {
+		if (i <= 0) i = images.length;
+		i--;
+	}
+
+	function next() {
+		if (i >= images.length - 1) i = -1;
+		i++;
+	}
+
+	var identifierModalImg = this.id;
 
 	const displayMediaImg = media => {
 		let modalInfoImg = {
@@ -14,6 +31,7 @@ function launchModalImg() {
 			photographerId: media.photographerId,
 			title: media.title,
 			image: media.image,
+			video: media.video,
 		};
 		create_modal_img(modalInfoImg);
 	};
@@ -43,10 +61,22 @@ function launchModalImg() {
 				.querySelector('.modal_section_img')
 				.appendChild(btnCloseImg);
 
-			const modal_img = document.createElement('img');
-			modal_img.classList.add('modal_img');
-			modal_img.src = './assets/images/' + modalInfoImg.image;
-			document.querySelector('.modal_section_img').appendChild(modal_img);
+			if (modalInfoImg.image) {
+				const modal_img = document.createElement('img');
+				modal_img.classList.add('modal_picture');
+				modal_img.src = './assets/images/' + modalInfoImg.image;
+				document
+					.querySelector('.modal_section_img')
+					.appendChild(modal_img);
+			} else {
+				const video_gallery = document.createElement('video');
+				video_gallery.classList.add('modal_picture');
+				video_gallery.src = './assets/images/' + modalInfoImg.video;
+				video_gallery.setAttribute('controls', '');
+				document
+					.querySelector('.modal_section_img')
+					.appendChild(video_gallery);
+			}
 
 			const title_img = document.createElement('h1');
 			title_img.classList.add('title_img');
@@ -55,15 +85,20 @@ function launchModalImg() {
 
 			const right_chevron = document.createElement('a');
 			right_chevron.className = 'fas fa-chevron-right right_chevron';
+			right_chevron.addEventListener('click', next);
 			document
 				.querySelector('.modal_section_img')
 				.appendChild(right_chevron);
 
 			const left_chevron = document.createElement('a');
 			left_chevron.className = 'fas fa-chevron-left left_chevron';
+			left_chevron.addEventListener('click', prev);
 			document
 				.querySelector('.modal_section_img')
 				.appendChild(left_chevron);
+
+			const total_title = document.querySelectorAll('.title-img');
+			console.log(total_title);
 		}
 	};
 }
