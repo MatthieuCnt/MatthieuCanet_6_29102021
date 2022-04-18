@@ -8,6 +8,10 @@ body {
 	padding: 30px;
 }
 
+*:focus {
+	outline: 3px solid #901c1c;
+}
+
 main {
 	padding: 60px 100px;
 }
@@ -116,7 +120,7 @@ h1 {
 	display: block;
 	margin: 0;
 	padding: 0.75rem 3rem 0.75rem 1rem;
-	width: 100%;
+	width: 150px;
 	font-size: 1.125rem;
 	color: #fff;
 	line-height: 1.2;
@@ -129,7 +133,7 @@ h1 {
 }
 .css-select__dropdown {
 	position: absolute;
-	top: 24px;
+	top: -12px;
 	left: 0;
 	padding: 0.5rem;
 	width: 100%;
@@ -141,7 +145,6 @@ h1 {
 	visibility: hidden;
 	transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
 	overflow: auto;
-	z-index: 9999;
 }
 .css-select__dropdown::-webkit-scrollbar {
 	width: 0.5rem;
@@ -172,7 +175,23 @@ h1 {
 	text-align: left;
 	line-height: 1.2;
 	border: none;
-	border-top: 1px solid white;
+	border-bottom: 1px solid white;
+	background: transparent;
+	transition: background 0.3s ease;
+	cursor: pointer;
+	outline: none !important;
+}
+
+.css-select__option1 {
+	display: block;
+	margin: 0;
+	padding: 0.5rem;
+	width: 100%;
+	font-size: 1.125rem;
+	color: #fff;
+	text-align: left;
+	line-height: 1.2;
+	border: none;
 	background: transparent;
 	transition: background 0.3s ease;
 	cursor: pointer;
@@ -183,11 +202,11 @@ h1 {
 	display: grid;
 	gap: 30px;
 	grid-template-columns: repeat(3, 1fr);
-	margin-top: 30px;
+	margin-top: 60px;
 }
 
 .photographer_gallery_picture {
-	height: 320px;
+	height: 300px;
 	width: 100%;
 	margin: 0;
 }
@@ -226,6 +245,7 @@ h1 {
 	padding-left: 16px;
 	color: #901c1c;
 	align-self: center;
+	cursor: pointer;
 }
 
 .footer_heart {
