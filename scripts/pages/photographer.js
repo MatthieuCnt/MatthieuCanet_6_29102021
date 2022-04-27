@@ -245,29 +245,43 @@ const create_article_img = mymedias => {
 	const figure = document.createElement('figure');
 	figure.classList.add('photographer_gallery_picture');
 	figure.id = mymedias.id;
-	figure.addEventListener('click', launchModalImg);
+	figure.tabIndex = '-1';
 	document.getElementById(mymedias.id + '_figure').appendChild(figure);
 
 	if (mymedias.image) {
 		const img_gallery = document.createElement('img');
 		img_gallery.classList.add('photographer_gallery_img');
 		img_gallery.src = './assets/images/' + mymedias.image;
-		img_gallery.tabIndex = '12';
 		img_gallery.setAttribute('alt', mymedias.title);
+		img_gallery.dataset.id = mymedias.id;
+		img_gallery.tabIndex = '12';
+		img_gallery.addEventListener('click', e => launchModalImg(e));
+		img_gallery.addEventListener('keydown', e => {
+			if (e.key == 'Enter') {
+				launchModalImg(e);
+			}
+		});
 		document.getElementById(mymedias.id).appendChild(img_gallery);
 	} else {
 		const video_gallery = document.createElement('video');
 		video_gallery.classList.add('photographer_gallery_img');
 		video_gallery.src = './assets/images/' + mymedias.video;
-		video_gallery.tabIndex = '12';
 		video_gallery.setAttribute('alt', mymedias.title);
+		video_gallery.dataset.id = mymedias.id;
+		video_gallery.tabIndex = '12';
+		video_gallery.addEventListener('click', e => launchModalImg(e));
+		video_gallery.addEventListener('keydown', e => {
+			if (e.key == 'Enter') {
+				launchModalImg(e);
+			}
+		});
 		document.getElementById(mymedias.id).appendChild(video_gallery);
 	}
 
 	const div_footer = document.createElement('figcaption');
 	div_footer.classList.add('photographer_gallery_footer');
 	div_footer.id = mymedias.id + '_footer';
-	document.getElementById(mymedias.id + '_figure').appendChild(div_footer);
+	document.getElementById(mymedias.id).appendChild(div_footer);
 
 	const text = document.createElement('p');
 	text.classList.add('photographer_gallery_footer_text');

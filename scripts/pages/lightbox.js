@@ -1,5 +1,8 @@
 // launch modal form
-function launchModalImg() {
+function launchModalImg(e) {
+	console.log(e.target);
+	console.log(e.target.dataset.id);
+
 	document.getElementById('modal_img').style.display = 'block';
 	document.getElementById('modal_img').setAttribute('tabindex', '-1');
 	document.getElementById('modal_img').focus();
@@ -28,7 +31,7 @@ function launchModalImg() {
 		.querySelector('.css-select__option1')
 		.setAttribute('tabindex', '-1');
 
-	var varImg = document.querySelectorAll('.photographer_gallery_img');
+	var varImg = document.querySelectorAll('.photographer_gallery_picture');
 	for (var i = 0; i < varImg.length; i++) {
 		varImg[i].setAttribute('tabindex', '-1');
 	}
@@ -88,7 +91,7 @@ function launchModalImg() {
 			.querySelector('.css-select__option1')
 			.setAttribute('tabindex', '11'); //11 à la base
 
-		var varImg = document.querySelectorAll('.photographer_gallery_img');
+		var varImg = document.querySelectorAll('.photographer_gallery_picture');
 		for (var i = 0; i < varImg.length; i++) {
 			varImg[i].setAttribute('tabindex', '12');
 		}
@@ -110,7 +113,7 @@ function launchModalImg() {
 			varheart[i].setAttribute('tabindex', '12');
 		}
 
-		documen.querySelector('.span').setAttribute('tabindex', '13'); //13 à la base
+		document.querySelector('.span').setAttribute('tabindex', '13'); //13 à la base
 		document
 			.querySelector('.photographer_price')
 			.setAttribute('tabindex', '14'); //14 à la base
@@ -141,6 +144,7 @@ function launchModalImg() {
 		if (event.key == 'ArrowRight') {
 			next(1);
 		}
+
 		if (event.key == 'ArrowLeft') {
 			prev(-1);
 		}
@@ -166,6 +170,11 @@ function launchModalImg() {
 		btnCloseImg.className = 'fas fa-times cross_img';
 		btnCloseImg.setAttribute('aria-label', 'Fermer la fenêtre');
 		btnCloseImg.addEventListener('click', closemodalimg);
+		btnCloseImg.addEventListener('keydown', function (event) {
+			if (event.key == 'Enter') {
+				closemodalimg();
+			}
+		});
 		btnCloseImg.tabIndex = '1';
 		document.querySelector('.modal_section_img').appendChild(btnCloseImg);
 
@@ -194,6 +203,11 @@ function launchModalImg() {
 		right_chevron.className = 'fas fa-chevron-right right_chevron';
 		right_chevron.setAttribute('aria-label', 'Suivant');
 		right_chevron.addEventListener('click', next);
+		right_chevron.addEventListener('keydown', function (event) {
+			if (event.key == 'Enter') {
+				next();
+			}
+		});
 		right_chevron.tabIndex = '3';
 		document.querySelector('.modal_section_img').appendChild(right_chevron);
 
@@ -201,11 +215,17 @@ function launchModalImg() {
 		left_chevron.className = 'fas fa-chevron-left left_chevron';
 		left_chevron.setAttribute('aria-label', 'Précédent');
 		left_chevron.addEventListener('click', prev);
+		left_chevron.addEventListener('keydown', function (event) {
+			if (event.key == 'Enter') {
+				prev();
+			}
+		});
 		left_chevron.tabIndex = '2';
 		document.querySelector('.modal_section_img').appendChild(left_chevron);
 	};
 	console.log(mediasForLightbox);
-	var identifierModalImg = this.id;
+	//var identifierModalImg = this.id;
+	var identifierModalImg = e.target.dataset.id;
 	console.log(identifierModalImg);
 
 	for (i = 0; i < mediasForLightbox.length; i++) {

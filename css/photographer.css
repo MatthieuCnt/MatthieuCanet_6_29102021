@@ -79,6 +79,10 @@ h1 {
 	font-size: bold;
 }
 
+.contact_button:focus {
+	background-color: #db8876;
+}
+
 .photographer_picture {
 	display: flex;
 	font-weight: bold;
@@ -97,6 +101,7 @@ h1 {
 	margin-left: 12px;
 	bottom: 10px;
 }
+
 .css-select:after {
 	content: '';
 	display: block;
@@ -179,7 +184,10 @@ h1 {
 	background: transparent;
 	transition: background 0.3s ease;
 	cursor: pointer;
-	outline: none !important;
+}
+
+.css-select__option:focus {
+	outline: 3px solid white;
 }
 
 .css-select__option1 {
@@ -195,7 +203,10 @@ h1 {
 	background: transparent;
 	transition: background 0.3s ease;
 	cursor: pointer;
-	outline: none !important;
+}
+
+.css-select__option1:focus {
+	outline: 3px solid white;
 }
 
 .photographer_gallery {
