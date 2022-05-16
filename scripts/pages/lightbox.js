@@ -31,7 +31,7 @@ function launchModalImg(e) {
 		.querySelector('.css-select__option1')
 		.setAttribute('tabindex', '-1');
 
-	var varImg = document.querySelectorAll('.photographer_gallery_picture');
+	var varImg = document.querySelectorAll('.photographer_gallery_img');
 	for (var i = 0; i < varImg.length; i++) {
 		varImg[i].setAttribute('tabindex', '-1');
 	}
@@ -91,7 +91,7 @@ function launchModalImg(e) {
 			.querySelector('.css-select__option1')
 			.setAttribute('tabindex', '11'); //11 à la base
 
-		var varImg = document.querySelectorAll('.photographer_gallery_picture');
+		var varImg = document.querySelectorAll('.photographer_gallery_img');
 		for (var i = 0; i < varImg.length; i++) {
 			varImg[i].setAttribute('tabindex', '12');
 		}

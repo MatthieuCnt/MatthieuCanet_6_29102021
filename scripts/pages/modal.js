@@ -1,63 +1,112 @@
 // launch modal form
 function launchModal() {
+	document.querySelector('.logo').setAttribute('tabindex', '-1');
+	document.querySelector('.photographer_name').setAttribute('tabindex', '-1');
+	document
+		.querySelector('.photographer_localization')
+		.setAttribute('tabindex', '-1');
+	document
+		.querySelector('.photographer_tagline')
+		.setAttribute('tabindex', '-1');
+	document.querySelector('.contact_button').setAttribute('tabindex', '-1');
+	document.querySelector('.photographer-img').setAttribute('tabindex', '-1');
+	document.querySelector('.label').setAttribute('tabindex', '-1');
+	document
+		.querySelector('.css-select__selected')
+		.setAttribute('tabindex', '-1');
+	document
+		.querySelector('.css-select__option')
+		.setAttribute('tabindex', '-1');
+	document
+		.querySelector('.css-select__option')
+		.setAttribute('tabindex', '-1');
+	document
+		.querySelector('.css-select__option1')
+		.setAttribute('tabindex', '-1');
+
+	var varImg = document.querySelectorAll('.photographer_gallery_img');
+	for (var i = 0; i < varImg.length; i++) {
+		varImg[i].setAttribute('tabindex', '-1');
+	}
+
+	var varImgFooter = document.querySelectorAll(
+		'.photographer_gallery_footer_text',
+	);
+	for (var i = 0; i < varImgFooter.length; i++) {
+		varImgFooter[i].setAttribute('tabindex', '-1');
+	}
+
+	var varlikes = document.querySelectorAll('.likes');
+	for (var i = 0; i < varlikes.length; i++) {
+		varlikes[i].setAttribute('tabindex', '-1');
+	}
+
+	var varheart = document.querySelectorAll('.far');
+	for (var i = 0; i < varheart.length; i++) {
+		varheart[i].setAttribute('tabindex', '-1');
+	}
+
+	document.querySelector('.span').setAttribute('tabindex', '-1');
+	document
+		.querySelector('.photographer_price')
+		.setAttribute('tabindex', '-1');
+
 	function closeModal(event) {
 		document.getElementById('close_modal').remove();
-		document.querySelector('.logo').setAttribute('tabindex', '-1');
+		document.querySelector('.logo').setAttribute('tabindex', '1'); //1 à la base
 		document
 			.querySelector('.photographer_name')
-			.setAttribute('tabindex', '-1');
+			.setAttribute('tabindex', '2'); //2 à la base
 		document
 			.querySelector('.photographer_localization')
-			.setAttribute('tabindex', '-1');
+			.setAttribute('tabindex', '3'); //3 à la base
 		document
 			.querySelector('.photographer_tagline')
-			.setAttribute('tabindex', '-1');
-		document
-			.querySelector('.contact_button')
-			.setAttribute('tabindex', '-1');
+			.setAttribute('tabindex', '4'); //4 à la base
+		document.querySelector('.contact_button').setAttribute('tabindex', '5'); //5 à la base
 		document
 			.querySelector('.photographer-img')
-			.setAttribute('tabindex', '-1');
-		document.querySelector('.label').setAttribute('tabindex', '-1');
+			.setAttribute('tabindex', '6'); //6 à la base
+		document.querySelector('.label').setAttribute('tabindex', '7'); //7 à la base
 		document
 			.querySelector('.css-select__selected')
-			.setAttribute('tabindex', '-1');
+			.setAttribute('tabindex', '8'); //8 à la base
 		document
 			.querySelector('.css-select__option')
-			.setAttribute('tabindex', '-1');
+			.setAttribute('tabindex', '9'); //9 à la base
 		document
 			.querySelector('.css-select__option')
-			.setAttribute('tabindex', '-1');
+			.setAttribute('tabindex', '10'); //10 à la base
 		document
 			.querySelector('.css-select__option1')
-			.setAttribute('tabindex', '-1');
+			.setAttribute('tabindex', '11'); //11 à la base
 
-		var varImg = document.querySelectorAll('.photographer_gallery_picture');
+		var varImg = document.querySelectorAll('.photographer_gallery_img');
 		for (var i = 0; i < varImg.length; i++) {
-			varImg[i].setAttribute('tabindex', '-1');
+			varImg[i].setAttribute('tabindex', '12');
 		}
 
 		var varImgFooter = document.querySelectorAll(
 			'.photographer_gallery_footer_text',
 		);
 		for (var i = 0; i < varImgFooter.length; i++) {
-			varImgFooter[i].setAttribute('tabindex', '-1');
+			varImgFooter[i].setAttribute('tabindex', '12');
 		}
 
 		var varlikes = document.querySelectorAll('.likes');
 		for (var i = 0; i < varlikes.length; i++) {
-			varlikes[i].setAttribute('tabindex', '-1');
+			varlikes[i].setAttribute('tabindex', '12');
 		}
 
 		var varheart = document.querySelectorAll('.far');
 		for (var i = 0; i < varheart.length; i++) {
-			varheart[i].setAttribute('tabindex', '-1');
+			varheart[i].setAttribute('tabindex', '12');
 		}
 
-		document.querySelector('.span').setAttribute('tabindex', '-1');
+		document.querySelector('.span').setAttribute('tabindex', '13'); //13 à la base
 		document
 			.querySelector('.photographer_price')
-			.setAttribute('tabindex', '-1');
+			.setAttribute('tabindex', '14'); //14 à la base
 	}
 
 	function sendModal(event) {
@@ -94,7 +143,7 @@ function launchModal() {
 			.querySelector('.css-select__option1')
 			.setAttribute('tabindex', '11'); //11 à la base
 
-		var varImg = document.querySelectorAll('.photographer_gallery_picture');
+		var varImg = document.querySelectorAll('.photographer_gallery_img');
 		for (var i = 0; i < varImg.length; i++) {
 			varImg[i].setAttribute('tabindex', '12');
 		}
@@ -116,7 +165,7 @@ function launchModal() {
 			varheart[i].setAttribute('tabindex', '12');
 		}
 
-		documen.querySelector('.span').setAttribute('tabindex', '13'); //13 à la base
+		document.querySelector('.span').setAttribute('tabindex', '13'); //13 à la base
 		document
 			.querySelector('.photographer_price')
 			.setAttribute('tabindex', '14'); //14 à la base
