@@ -115,6 +115,8 @@
 	top: 30px;
 	font-size: 60px;
 	color: #901c1c;
+	background: none;
+	border: none;
 }
 
 .title_img {
@@ -129,6 +131,8 @@
 	right: 30px;
 	top: 50%;
 	transform: translateY(-50%);
+	background: none;
+	border: none;
 }
 
 .left_chevron {
@@ -138,4 +142,6 @@
 	left: 30px;
 	top: 50%;
 	transform: translateY(-50%);
+	background: none;
+	border: none;
 }

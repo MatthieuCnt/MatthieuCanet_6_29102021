@@ -39,17 +39,17 @@ function launchModalImg(e) {
 	var varImgFooter = document.querySelectorAll(
 		'.photographer_gallery_footer_text',
 	);
-	for (var i = 0; i < varImgFooter.length; i++) {
+	for (let i = 0; i < varImgFooter.length; i++) {
 		varImgFooter[i].setAttribute('tabindex', '-1');
 	}
 
 	var varlikes = document.querySelectorAll('.likes');
-	for (var i = 0; i < varlikes.length; i++) {
+	for (let i = 0; i < varlikes.length; i++) {
 		varlikes[i].setAttribute('tabindex', '-1');
 	}
 
 	var varheart = document.querySelectorAll('.far');
-	for (var i = 0; i < varheart.length; i++) {
+	for (let i = 0; i < varheart.length; i++) {
 		varheart[i].setAttribute('tabindex', '-1');
 	}
 
@@ -99,17 +99,17 @@ function launchModalImg(e) {
 		var varImgFooter = document.querySelectorAll(
 			'.photographer_gallery_footer_text',
 		);
-		for (var i = 0; i < varImgFooter.length; i++) {
+		for (let i = 0; i < varImgFooter.length; i++) {
 			varImgFooter[i].setAttribute('tabindex', '12');
 		}
 
 		var varlikes = document.querySelectorAll('.likes');
-		for (var i = 0; i < varlikes.length; i++) {
+		for (let i = 0; i < varlikes.length; i++) {
 			varlikes[i].setAttribute('tabindex', '12');
 		}
 
 		var varheart = document.querySelectorAll('.far');
-		for (var i = 0; i < varheart.length; i++) {
+		for (let i = 0; i < varheart.length; i++) {
 			varheart[i].setAttribute('tabindex', '12');
 		}
 
@@ -166,17 +166,22 @@ function launchModalImg(e) {
 			.querySelector('.bground_modal_img')
 			.appendChild(sectionModalImg);
 
-		const btnCloseImg = document.createElement('i');
-		btnCloseImg.className = 'fas fa-times cross_img';
-		btnCloseImg.setAttribute('aria-label', 'Fermer la fenêtre');
+		const btnCloseImg = document.createElement('button');
+		btnCloseImg.classList.add('cross_img');
 		btnCloseImg.addEventListener('click', closemodalimg);
+		btnCloseImg.setAttribute('aria-label', 'Fermer la fenêtre');
+		btnCloseImg.tabIndex = '1';
 		btnCloseImg.addEventListener('keydown', function (event) {
 			if (event.key == 'Enter') {
 				closemodalimg();
 			}
 		});
-		btnCloseImg.tabIndex = '1';
 		document.querySelector('.modal_section_img').appendChild(btnCloseImg);
+
+		const cross = document.createElement('i');
+		cross.classList.add('cross');
+		cross.className = 'fas fa-times';
+		document.querySelector('.cross_img').appendChild(cross);
 
 		if (mediasForLightbox.image) {
 			const modal_img = document.createElement('img');
@@ -199,8 +204,8 @@ function launchModalImg(e) {
 		title_img.tabIndex = '4';
 		document.querySelector('.modal_section_img').appendChild(title_img);
 
-		const right_chevron = document.createElement('a');
-		right_chevron.className = 'fas fa-chevron-right right_chevron';
+		const right_chevron = document.createElement('button');
+		right_chevron.className = ' right_chevron';
 		right_chevron.setAttribute('aria-label', 'Suivant');
 		right_chevron.addEventListener('click', next);
 		right_chevron.addEventListener('keydown', function (event) {
@@ -211,8 +216,12 @@ function launchModalImg(e) {
 		right_chevron.tabIndex = '3';
 		document.querySelector('.modal_section_img').appendChild(right_chevron);
 
-		const left_chevron = document.createElement('a');
-		left_chevron.className = 'fas fa-chevron-left left_chevron';
+		const right_button = document.createElement('i');
+		right_button.className = 'fas fa-chevron-right';
+		document.querySelector('.right_chevron').appendChild(right_button);
+
+		const left_chevron = document.createElement('button');
+		left_chevron.className = 'left_chevron';
 		left_chevron.setAttribute('aria-label', 'Précédent');
 		left_chevron.addEventListener('click', prev);
 		left_chevron.addEventListener('keydown', function (event) {
@@ -222,7 +231,12 @@ function launchModalImg(e) {
 		});
 		left_chevron.tabIndex = '2';
 		document.querySelector('.modal_section_img').appendChild(left_chevron);
+
+		const left_button = document.createElement('i');
+		left_button.className = 'fas fa-chevron-left';
+		document.querySelector('.left_chevron').appendChild(left_button);
 	};
+
 	console.log(mediasForLightbox);
 	//var identifierModalImg = this.id;
 	var identifierModalImg = e.target.dataset.id;

@@ -25,24 +25,24 @@ function launchModal() {
 		.setAttribute('tabindex', '-1');
 
 	var varImg = document.querySelectorAll('.photographer_gallery_img');
-	for (var i = 0; i < varImg.length; i++) {
+	for (let i = 0; i < varImg.length; i++) {
 		varImg[i].setAttribute('tabindex', '-1');
 	}
 
 	var varImgFooter = document.querySelectorAll(
 		'.photographer_gallery_footer_text',
 	);
-	for (var i = 0; i < varImgFooter.length; i++) {
+	for (let i = 0; i < varImgFooter.length; i++) {
 		varImgFooter[i].setAttribute('tabindex', '-1');
 	}
 
 	var varlikes = document.querySelectorAll('.likes');
-	for (var i = 0; i < varlikes.length; i++) {
+	for (let i = 0; i < varlikes.length; i++) {
 		varlikes[i].setAttribute('tabindex', '-1');
 	}
 
 	var varheart = document.querySelectorAll('.far');
-	for (var i = 0; i < varheart.length; i++) {
+	for (let i = 0; i < varheart.length; i++) {
 		varheart[i].setAttribute('tabindex', '-1');
 	}
 
@@ -89,17 +89,17 @@ function launchModal() {
 		var varImgFooter = document.querySelectorAll(
 			'.photographer_gallery_footer_text',
 		);
-		for (var i = 0; i < varImgFooter.length; i++) {
+		for (let i = 0; i < varImgFooter.length; i++) {
 			varImgFooter[i].setAttribute('tabindex', '12');
 		}
 
 		var varlikes = document.querySelectorAll('.likes');
-		for (var i = 0; i < varlikes.length; i++) {
+		for (let i = 0; i < varlikes.length; i++) {
 			varlikes[i].setAttribute('tabindex', '12');
 		}
 
 		var varheart = document.querySelectorAll('.far');
-		for (var i = 0; i < varheart.length; i++) {
+		for (let i = 0; i < varheart.length; i++) {
 			varheart[i].setAttribute('tabindex', '12');
 		}
 
@@ -151,17 +151,17 @@ function launchModal() {
 		var varImgFooter = document.querySelectorAll(
 			'.photographer_gallery_footer_text',
 		);
-		for (var i = 0; i < varImgFooter.length; i++) {
+		for (let i = 0; i < varImgFooter.length; i++) {
 			varImgFooter[i].setAttribute('tabindex', '12');
 		}
 
 		var varlikes = document.querySelectorAll('.likes');
-		for (var i = 0; i < varlikes.length; i++) {
+		for (let i = 0; i < varlikes.length; i++) {
 			varlikes[i].setAttribute('tabindex', '12');
 		}
 
 		var varheart = document.querySelectorAll('.far');
-		for (var i = 0; i < varheart.length; i++) {
+		for (let i = 0; i < varheart.length; i++) {
 			varheart[i].setAttribute('tabindex', '12');
 		}
 

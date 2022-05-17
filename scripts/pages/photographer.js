@@ -255,6 +255,7 @@ const create_article_img = mymedias => {
 		img_gallery.setAttribute('alt', mymedias.title);
 		img_gallery.dataset.id = mymedias.id;
 		img_gallery.tabIndex = '12';
+		img_gallery.ariaLabel = mymedias.title;
 		img_gallery.addEventListener('click', e => launchModalImg(e));
 		img_gallery.addEventListener('keydown', e => {
 			if (e.key == 'Enter') {
@@ -269,6 +270,7 @@ const create_article_img = mymedias => {
 		video_gallery.setAttribute('alt', mymedias.title);
 		video_gallery.dataset.id = mymedias.id;
 		video_gallery.tabIndex = '12';
+		video_gallery.ariaLabel = mymedias.title;
 		video_gallery.addEventListener('click', e => launchModalImg(e));
 		video_gallery.addEventListener('keydown', e => {
 			if (e.key == 'Enter') {
