@@ -307,26 +307,31 @@ const create_article_img = mymedias => {
 	span_likes.ariaLabel = mymedias.likes;
 	document.getElementById(div_heart.id).appendChild(span_likes);
 
-	const heart = document.createElement('i');
-	heart.className = 'far fa-heart heart';
+	const heart = document.createElement('button');
+	heart.className = 'heart';
 	heart.addEventListener('click', addLikes);
 	heart.tabIndex = '12';
 	heart.ariaLabel = 'coeur';
+	heart.id = mymedias.id + '_heart_btn';
 	document.getElementById(div_heart.id).appendChild(heart);
 
+	const fas_heart = document.createElement('i');
+	fas_heart.classList.add('heart');
+	fas_heart.className = 'far fa-heart';
+	document.getElementById(heart.id).appendChild(fas_heart);
 	function addLikes() {
 		let addRate = span_likes.innerHTML;
 
 		if (div_heart.getAttribute('liked') == 'true') {
-			heart.classList.add('far');
-			heart.classList.remove('fas');
-			heart.ariaLabel = 'aime pas';
+			fas_heart.classList.add('far');
+			fas_heart.classList.remove('fas');
+			fas_heart.ariaLabel = 'aime pas';
 			div_heart.setAttribute('liked', false);
 			addRate = span_likes.innerHTML--;
 		} else if (div_heart.getAttribute('liked') == 'false') {
-			heart.classList.add('fas');
-			heart.classList.remove('far');
-			heart.ariaLabel = 'aime';
+			fas_heart.classList.add('fas');
+			fas_heart.classList.remove('far');
+			fas_heart.ariaLabel = 'aime';
 			div_heart.setAttribute('liked', true);
 			addRate = span_likes.innerHTML++;
 		}

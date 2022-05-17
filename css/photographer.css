@@ -257,6 +257,9 @@ h1 {
 	color: #901c1c;
 	align-self: center;
 	cursor: pointer;
+	background: none;
+	border: none;
+	font-size: 20px;
 }
 
 .footer_heart {
